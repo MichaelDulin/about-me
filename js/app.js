@@ -1,15 +1,19 @@
-function getUserName() {
+'use strict'
 
+getUserName();
+q1(); q2(); q3(); q4(); qF5();
+
+function getUserName() {
+  // Get user name
   let userName = prompt('Please type your name: ');
   while (userName === '') {
     userName = prompt('That is not correct. Please enter your name: ');
   }
   alert('Hello, ' + userName + ' and welcome to my portfolio!');
 }
-// Get user name
 
 // Question 1:
-function qOne() {
+function q1() {
   let userResponse1 = prompt('Have I ever lived in another Country?');
   if (userResponse1 === 'yes' || userResponse1 === 'y') {
     alert('Good job, ' + userName + ' That is correct!');
@@ -20,7 +24,7 @@ function qOne() {
 }
 
 // Question 2:
-function qTwo() {
+function q2() {
 
   let userResponse2 = prompt('Do I coach baseball?');
   if (userResponse2 === 'yes' || userResponse2 === 'y') {
@@ -31,7 +35,7 @@ function qTwo() {
   }
 }
 // Question 3:
-function qThree() {
+function q3() {
 
   let userResponse3 = prompt('Was I in the military?');
   if (userResponse3 === 'yes' || userResponse3 === 'y') {
@@ -42,7 +46,7 @@ function qThree() {
   }
 }
 // Question 4:
-function qFour() {
+function q4() {
 
   let userResponse4 = prompt('Have I ever lived in Canada?');
   if (userResponse4 === 'no' || userResponse4 === 'n') {
@@ -53,7 +57,7 @@ function qFour() {
   }
 }
 // Question 5:
-function qFive() {
+function qF5() {
 
   let userResponse5 = prompt('Do I like programming?');
   if (userResponse5 === 'yes' || userResponse5 === 'y') {
