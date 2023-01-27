@@ -1,3 +1,21 @@
+
+/* Used in seperate css file (layout.css) 
+* {
+  box-sizing: border-box; --> sets profile for box elements scaling 100%
+}
+
+display: block; --> sets property from inline to box
+margin: 5rem, auto, auto, auto; --> allows for 4 sides of an element sizing. 
+-- goes clockwise --> top, right, bottom, left
+
+.clearfix::after { --> used to fix weird issues (not normally utilized)
+  content: "";
+  clear: bothh;
+  display: table;
+}
+
+display: inline-block; --> sets elements inline
+*/
 body {
   padding: 30px;
   background-color: #cad2c5;
@@ -74,4 +92,12 @@ p1 {
   border-radius: 25px;
   border: 2px solid #2f3e46;
   background-color:#52796f;
+}
+
+#topTen {
+  height:220px;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: #2f3e46;
 }
