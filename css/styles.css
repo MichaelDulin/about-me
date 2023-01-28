@@ -95,8 +95,9 @@ p1 {
 }
 
 #topTen {
+  margin-top: 15%;
   height:220px;
-  padding: 10px;
+  padding: 50px;
   text-align: center;
   font-size: 20px;
   color: #2f3e46;

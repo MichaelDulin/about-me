@@ -8,10 +8,10 @@ let userResponse4;
 let userResponse5;
 let guessesLeft = 4;
 let userPoints = 0;
-let userResonse7;
+let userResponse7;
 
 getUserName();
-q1(); q2(); q3(); q4(); q5(); q6(); q7();
+q1();q2();q3();q4();q5();q6();q7();
 
 function getUserName() {
   // Get user name
@@ -94,7 +94,7 @@ function q5() {
   calcPoints();
 }
 
-// Crashing on loop breakout
+
 function q6() {
   let correctNum = 7;
   let condition = 0;
@@ -122,20 +122,20 @@ function q6() {
   calcPoints();
 }
 
-// Untested
+/*
 function q7() {
   guessesLeft = 6;
   let correctGuesses = 0;
-  let myArr = ['Seattle', 'Yokosuka', 'Norfolk', 'Jacksonville'];
+  let myArr = ['seattle', 'yokosuka', 'norfolk', 'jacksonville'];
   while (guessesLeft > 0 && correctGuesses < 4){
-    userResonse7 = prompt('What 4 cities have I lived in? (guesses reamining = ' + guessesLeft + '): ');
+    userResponse7 = prompt('What 4 cities have I lived in? (guesses reamining = ' + guessesLeft + '): ');
     for (let i = 0; i < myArr.length; i++) {
-      if (userResonse7 === myArr[i]) {
-        alert('That is a correct answer! I have lived in ' + userResonse7);
+      if (userResponse7 === myArr[i]) {
+        alert('That is a correct answer! I have lived in ' + userResponse7);
         correctGuesses += 1;
         guessesLeft -= 1;
         userPoints += 1;
-      } else {
+      } else if (userResponse7 !== myArr[i] && i === 3){
         alert('That is not correct. Try again!');
         guessesLeft -= 1;
       }
@@ -144,4 +144,28 @@ function q7() {
   alert('Here all all the places I have lived: ' + myArr);
   alert('Thanks for playing, ' + userName + '! Your final score: ' + userPoints);
 }
+*/
 
+function q7() {
+  guessesLeft = 6;
+  let correctGuesses = 0;
+  let myArr = ['seattle', 'yokosuka', 'norfolk', 'jacksonville'];
+  while (guessesLeft > 0 && correctGuesses < 3) {
+    userResponse7 = prompt('What 4 cities have I lived in? (guesses reamining = ' + guessesLeft + '): ');
+    let cur = myArr.some(checkAnswer);
+    function checkAnswer (correct){
+      return correct == userResponse7;
+    }
+    if (cur === true) {
+      alert('That is a correct answer! I have lived in ' + userResponse7);
+        correctGuesses += 1;
+        guessesLeft -= 1;
+        userPoints += 1;
+    } else {
+      alert('That is not correct. Try again!');
+      guessesLeft -= 1;
+    }
+  }
+  alert('Here all all the places I have lived: ' + myArr);
+  alert('Thanks for playing, ' + userName + '! Your final score: ' + userPoints);
+}
